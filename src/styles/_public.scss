@@ -7,12 +7,14 @@
     --color-accent: #FACC15;
     --color-background: #F9FAFB;
     --color-sidebar: #1E293B;
-    --color-text: #111827;
+    --color-text: #333333;
     --color-border: #E5E7EB;
     --color-white: #FFFFFF;
     --color-red: #EF4444;
     --color-green: #22C55E;
     --color-light-purple: #6366F1;
+    --color-light-yellow: #FEF8EC;
+    --color-darker-yellow: #FBDFA3;
 
     // variable dont need to change
     --main-width: 1340px;
@@ -23,10 +25,25 @@
 
     //variable font weight
     --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-black: 800;
+    --font-extrabold: 900;
+    --font-extralight: 100;
+    --font-extrabold: 900;
 
     // variable need to responsive
     --fontsize-small: 12px;
-
+    --fontsize-normal: 26px;
+    --fontsize-large: 24px;
+    --fontsize-bigger: 32px;
+    --fontsize-huge: 40px;
+    --fontsize-giant: 48px;
+    --fontsize-massive: 56px;
+    --fontsize-colossal: 64px;
+    --fontsize-gigantic: 72px;
     --fontsize-bigger-mobile: 30px;
     --fontsize-big-mobile: 17px;
 
@@ -59,6 +76,7 @@ body {
 }
 
 body {
+    font-family: var(--font-fredoka), sans-serif;
     font-size: var(--fontsize-normal);
     line-height: 1.4;
 }

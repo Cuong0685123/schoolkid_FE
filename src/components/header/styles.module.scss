@@ -1,2 +1,64 @@
 @use "../../styles/utils" as *;
 @use "../../styles/modules";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+
+    .navbar {
+
+        ul {
+            display: flex;
+            gap: 40px;
+            font-size: var(--fontsize-normal);
+            color: var(--color-text);
+            font-weight: var(--font-medium);
+
+            li {
+                a {
+                    position: relative;
+                    padding-bottom: 4px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: black;
+
+                        transform: translateY(-6px);
+                        opacity: 0;
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                    }
+
+                    &:hover::after {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .apply_now {
+        
+        button {
+            border: none;
+            background-color: var(--color-light-yellow);
+            padding: 30px 70px;
+            border-radius: 94px;
+            font-size: var(--fontsize-normal);
+            font-weight: var(--font-bold);
+            color: var(--color-text);
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: var(--color-darker-yellow);
+            }
+        }
+    }
+}

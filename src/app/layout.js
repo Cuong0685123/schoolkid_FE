@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import '@/styles/all.scss';
-import styles from './page.module.scss';
+import { Fredoka } from "next/font/google";
+import "@/styles/all.scss";
+import styles from "./page.module.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // tùy bạn cần
 });
 
 export const metadata = {
@@ -20,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${fredoka.variable}`}>
         {children}
       </body>
     </html>
