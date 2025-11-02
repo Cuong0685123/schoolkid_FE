@@ -21,6 +21,7 @@ export default function Index(params) {
                 </div>
                 <div className={styles.apply_now}>
                     <button>Apply now</button>
+                    <Image src={'/images/grid.svg'} alt="Grid" width={37} height={37} />
                 </div>
             </div>
         </>

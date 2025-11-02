@@ -7,6 +7,23 @@
     align-items: center;
     padding: 30px 70px;
 
+    @include respond-mobile() {
+        padding: 25px 10px;
+    }
+
+    .logo {
+
+        img {
+            width: 233px;
+            height: 82px;
+
+            @include respond-mobile() {
+                width: 171px;
+                height: 56px;
+            }
+        }
+    }
+
     .navbar {
 
         ul {
@@ -42,10 +59,18 @@
                 }
             }
         }
+
+        @include respond-mobile() {
+            display: none;
+        }
     }
 
     .apply_now {
-        
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+
         button {
             border: none;
             background-color: var(--color-light-yellow);
@@ -58,6 +83,20 @@
 
             &:hover {
                 background-color: var(--color-darker-yellow);
+            }
+
+            @include respond-mobile() {
+                display: none;
+            }
+        }
+
+        img {
+            width: 37px;
+            height: 37px;
+
+            @include respond-mobile() {
+                width: 24px;
+                height: 24px;
             }
         }
     }
