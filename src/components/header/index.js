@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 export default function Index(params) {
     return (
         <>
-            <div className={styles.header}>
+            <section id='header' className={styles.header}>
                 <div className={styles.logo}>
                     <Image src={'/images/logo.svg'} alt="Logo" width={233} height={82} />
                 </div>
@@ -23,7 +23,7 @@ export default function Index(params) {
                     <button>Apply now</button>
                     <Image src={'/images/grid.svg'} alt="Grid" width={37} height={37} />
                 </div>
-            </div>
+            </section>
         </>
     );
 }

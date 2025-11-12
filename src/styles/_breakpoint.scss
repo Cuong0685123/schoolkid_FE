@@ -1,12 +1,109 @@
+@use './variables' as *;
+
 @mixin respond-unmobile() {
-	@media (min-width: 700px) {
+	@media (min-width: toRem(576)) {
 		@content;
 	}
 }
 
-
 @mixin respond-mobile() {
-	@media (max-width: 700px) {
+	@media (max-width: toRem(576)) {
+		@content;
+	}
+}
+
+@mixin respond-untabletMedium() {
+	@media (min-width: toRem(768)) {
+		@content;
+	}
+}
+
+@mixin respond-untablet() {
+	@media (min-width: toRem(992)) {
+		@content;
+	}
+}
+
+@mixin respond-tabletMedium() {
+	@media (max-width: toRem(768)) {
+		@content;
+	}
+}
+
+@mixin respond-tabletMedium-m() {
+	@media (max-width: toRem(900)) {
+		@content;
+	}
+}
+
+@mixin respond-mobile-landscape() {
+	@media screen and (orientation: landscape) and (max-width: 992px) {
+	  @content;
+	}
+  }
+
+@mixin respond-tablet() {
+	@media (max-width: toRem(992)) {
+		@content;
+	}
+}
+
+@mixin respond-smalldesktop() {
+	@media (max-width: toRem(1024)) {
+		@content;
+	}
+}
+
+@mixin respond-desktopnormal() {
+	@media (max-width: toRem(1200)) {
+		@content;
+	}
+}
+
+@mixin respond-desktoplarge() {
+	@media (max-width: toRem(1400)) {
+		@content;
+	}
+}
+
+@mixin respond-desktoplarge-height() {
+	@media (max-width: toRem(1330)) and (max-height: toRem(800)) {
+		@content;
+	}
+}
+
+@mixin respond-desktoplarge-m() {
+	@media (max-width: toRem(1500)) {
+		@content;
+	}
+}
+
+@mixin respond-desktoplarge-l() {
+	@media (max-width: toRem(1600)) {
+		@content;
+	}
+}
+
+@mixin respond-desktoplarger() {
+	@media (min-width: toRem(1600)) {
+		@content;
+	}
+}
+
+@mixin respond-desktop-superlarger() {
+	@media (max-width: toRem(3500))  {
+		@content;
+	}
+}
+
+@mixin respond-desktop-superlarger-height() {
+	@media (max-height: toRem(3500)) {
+		@content;
+	}
+}
+
+@mixin respond-desktop-ultralarge() {
+	@media (min-width: toRem(1921)) {
 		@content;
 	}
 }

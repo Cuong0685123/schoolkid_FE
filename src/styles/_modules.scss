@@ -1,0 +1,9 @@
+@use './variables' as *;
+@use './breakpoint' as *;
+
+.container {
+    width: 90%;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    position: relative;
+}

@@ -4,20 +4,22 @@
     // variable color
     --color-primary: #4F46E5;
     --color-secondary: #22C55E;
-    --color-accent: #FACC15;
+    --color-orange: #FEA439;
+    --color-dark-orange: #E48E1F;
+    
     --color-background: #F9FAFB;
     --color-sidebar: #1E293B;
     --color-text: #333333;
     --color-border: #E5E7EB;
     --color-white: #FFFFFF;
     --color-red: #EF4444;
-    --color-green: #22C55E;
+    --color-green: #1DC1B6;
     --color-light-purple: #6366F1;
     --color-light-yellow: #FEF8EC;
     --color-darker-yellow: #FBDFA3;
 
     // variable dont need to change
-    --main-width: 1340px;
+    --main-width: 1674px;
     --content-width: 1220px;
     --subcontent-width: 1000px;
 
@@ -55,6 +57,9 @@
 
 
     // variable spacing
+    --spacing-normal: 40px;
+    --spacing-semimedium: 55px;
+    --spacing-medium: 60px;
     --spacing-big: 80px;
 
 
@@ -141,6 +146,22 @@ li {
         &:hover {
             background-color: #2f9e44;
         }
+    }
+}
+
+.cta {
+    border: none;
+    font-size: 26px;
+    font-weight: $font-medium;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    padding: 28px 50px;
+    border-radius: 94px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: var(--color-dark-orange);
+        cursor: pointer;
     }
 }
 

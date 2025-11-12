@@ -1,2 +1,78 @@
 @use "../../styles/utils" as *;
 @use "../../styles/modules";
+
+
+.hero {
+    background: linear-gradient(to left, #EDFEFC 0%, #FEF6EC 100%);
+    height: calc(100vh - 141px);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 7.5%;
+        left: 0;
+        width: 100%;
+        height: 23px;
+        background: url('/images/hero-line.png') no-repeat center center;
+        background-size: contain;
+        z-index: 1;
+    }
+
+    .hero_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 140px 0 55px;
+
+        @include respond-mobile {
+            flex-direction: column;
+            padding: 100px 0 55px;
+        }
+
+        .col {
+            width: 50%;
+
+            @include respond-mobile {
+                width: 100%;
+                text-align: center;
+            }
+
+            .intro {
+                color: var(--color-green);
+                font-weight: $font-semibold;
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 70px;
+                font-weight: $font-bold;
+                letter-spacing: 0.03em;
+            }
+
+            .admission_date {
+                text-decoration: underline;
+                color: var(--color-text);
+                font-weight: $font-medium;
+                font-size: 26px;
+
+                margin: var(--spacing-semimedium) 0 33px;
+
+            }
+        }
+
+        .col_60 {
+            width: 60%;
+        }
+
+        .col_40 {
+            width: 40%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

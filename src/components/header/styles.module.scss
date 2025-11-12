@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 70px;
+    padding: 25px 70px;
 
     @include respond-mobile() {
         padding: 25px 10px;
@@ -37,6 +37,8 @@
                 a {
                     position: relative;
                     padding-bottom: 4px;
+                    font-size: 26px;
+                    font-weight: var(--font-medium);
 
                     &::after {
                         content: '';
