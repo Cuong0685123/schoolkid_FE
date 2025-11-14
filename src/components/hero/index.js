@@ -12,7 +12,7 @@ export default function Index(params) {
                             <p className={styles.intro}>Kindergarten Program</p>
                             <h2>Best Children’s <br /> Education Curriculum</h2>
                             <p className={styles.admission_date}>Admission Open 20-24 April</p>
-                            <button className="cta">Apply Now</button>
+                            <button className={clsx("cta", styles.cta)}>Apply Now</button>
                         </div>
                         <div className={clsx(styles.col, styles.col_40)}>
                             <Image src={'/images/hero-img.png'} alt='hero-image' width={875} height={738} />

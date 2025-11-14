@@ -17,6 +17,14 @@
         background: url('/images/hero-line.png') no-repeat center center;
         background-size: contain;
         z-index: 1;
+
+        @include respond-mobile {
+            content: none;
+        }
+    }
+
+    @include respond-mobile {
+        height: auto;
     }
 
     .hero_container {
@@ -27,7 +35,9 @@
 
         @include respond-mobile {
             flex-direction: column;
-            padding: 100px 0 55px;
+            padding: 70px 0 0 0;
+
+            gap: 40px;
         }
 
         .col {
@@ -42,12 +52,21 @@
                 color: var(--color-green);
                 font-weight: $font-semibold;
                 font-size: 32px;
+
+                @include respond-mobile {
+                    font-size: 24px;
+                    margin-bottom: var(--spacing-semismall);
+                }
             }
 
             h2 {
                 font-size: 70px;
                 font-weight: $font-bold;
                 letter-spacing: 0.03em;
+
+                @include respond-mobile {
+                    font-size: 32px;
+                }
             }
 
             .admission_date {
@@ -58,15 +77,28 @@
 
                 margin: var(--spacing-semimedium) 0 33px;
 
+                @include respond-mobile {
+                    font-size: var(--fontsize-small-mobile);
+                    margin: var(--spacing-semismall) 0 24px;
+                }
             }
         }
 
         .col_60 {
             width: 60%;
+
+            @include respond-mobile {
+                width: 100%;
+                text-align: left;
+            }
         }
 
         .col_40 {
             width: 40%;
+
+            @include respond-mobile {
+                width: 100%;
+            }
 
             img {
                 width: 100%;

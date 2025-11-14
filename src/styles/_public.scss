@@ -24,6 +24,7 @@
     --subcontent-width: 1000px;
 
     --spacing-small: 21px;
+    --spacing-semismall: 30px;
 
     //variable font weight
     --font-light: 300;
@@ -38,6 +39,7 @@
 
     // variable need to responsive
     --fontsize-small: 12px;
+    --fontsize-small-mobile: 16px;
     --fontsize-normal: 26px;
     --fontsize-large: 24px;
     --fontsize-bigger: 32px;
@@ -162,6 +164,11 @@ li {
     &:hover {
         background-color: var(--color-dark-orange);
         cursor: pointer;
+    }
+
+    @include respond-mobile {
+        font-size: var(--fontsize-small-mobile);
+        padding: 15px 33px;
     }
 }
 
