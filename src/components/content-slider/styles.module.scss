@@ -1,2 +1,130 @@
 @use "../../styles/utils" as *;
 @use "../../styles/modules";
+
+
+.content_slider {
+    text-align: center;
+    margin-top: toRem(70);
+
+    h1 {
+        font-size: toRem(45);
+        font-weight: $font-bold;
+    }
+
+
+    .swiper_container {
+        margin-block: toRem(90);
+
+        :global(.swiper-pagination) {
+            opacity: 1;
+            transition: 0.3s;
+            position: relative;
+            transform: none;
+            margin-top: toRem(78);
+        }
+
+        :global(.swiper-pagination-bullet) {
+            width: 26px;
+            height: 13px;
+            border-radius: 17px;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+            background-color: #333; // màu active
+            border-radius: 10px;
+        }
+
+        .swiper_slide {
+            border: 1px dotted var(--color-orange);
+            padding: toRem(52) toRem(62);
+            border-radius: toRem(32);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+                transform: translateY(-5px);
+                z-index: 10;
+            }
+
+            @include respond-desktoplarge() {
+                padding: toRem(32) toRem(42);
+            }
+
+            @include respond-mobile() {
+                padding: toRem(29) toRem(51);
+                width: 85%;
+                margin: 0 auto;
+            }
+
+            .image_container {
+                width: toRem(187);
+                height: toRem(187);
+                border: none;
+                border-radius: 50%;
+                background-color: var(--color-light-yellow);
+                margin: 0 auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include respond-desktoplarge() {
+                    width: toRem(120);
+                    height: toRem(120);
+                }
+
+                img {
+                    width: 60%;
+                }
+            }
+
+            h2 {
+                margin-block: toRem(40) toRem(20);
+
+                @include respond-desktoplarge() {
+                    font-size: toRem(20);
+                }
+
+                @include respond-mobile() {
+                    font-size: toRem(22);
+                }
+            }
+
+            p {
+                font-size: toRem(24);
+                margin-bottom: toRem(40);
+                min-height: toRem(100);
+                max-height: toRem(100);
+
+                @include respond-desktoplarge() {
+                    font-size: toRem(20);
+                }
+
+                @include respond-mobile() {
+                    font-size: toRem(16);
+                }
+            }
+
+            button {
+                padding: toRem(22) toRem(60);
+                border: 1px solid var(--color-orange);
+                border-radius: toRem(61);
+                font-size: toRem(22);
+                background-color: transparent;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: var(--color-orange);
+                    color: var(--color-white);
+                }
+
+                @include respond-mobile() {
+                    font-size: toRem(16);
+                    padding: toRem(16) toRem(40);
+                }
+            }
+        }
+    }
+}

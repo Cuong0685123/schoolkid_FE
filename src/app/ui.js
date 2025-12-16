@@ -18,7 +18,7 @@ export default function UI() {
             <Header />
             <Hero />
             <ContentSlider />
-            <ContentImage />
+            {/* <ContentImage />
             <ContentSlider />
             <ContentImage />
             <ViewMore />
@@ -26,7 +26,7 @@ export default function UI() {
             <ContentVideo />
             <News />
             <Newsletter />
-            <Footer />
+            <Footer /> */}
 
 
         </>
