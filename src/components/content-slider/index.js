@@ -45,7 +45,7 @@ export default function Index(params) {
 
     return (
         <>
-            <section className={styles.content_slider}>
+            <section className={styles.content_slider} id="content-slider" component="content-slider">
                 <div className='container'>
                     <h1>Our Programs</h1>
                     <div>Our multi-level kindergarten cater to the age groups 2-5 years with a curriculum focussing children.</div>

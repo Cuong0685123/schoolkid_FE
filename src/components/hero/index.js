@@ -5,7 +5,7 @@ import clsx from 'clsx';
 export default function Index(params) {
     return (
         <>
-            <section id="hero" className={styles.hero}>
+            <section id="hero" className={styles.hero} component="hero">
                 <div className='container'>
                     <div className={styles.hero_container}>
                         <div className={clsx(styles.col, styles.col_60)}>

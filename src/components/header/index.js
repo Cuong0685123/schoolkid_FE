@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 export default function Index(params) {
     return (
         <>
-            <section id='header' className={styles.header}>
+            <section id='header' className={styles.header} component="header">
                 <div className={styles.logo}>
                     <Image src={'/images/logo.svg'} alt="Logo" width={233} height={82} />
                 </div>

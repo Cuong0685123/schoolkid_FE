@@ -18,15 +18,15 @@ export default function UI() {
             <Header />
             <Hero />
             <ContentSlider />
-            {/* <ContentImage />
-            <ContentSlider />
             <ContentImage />
-            <ViewMore />
-            <ContentSlider />
-            <ContentVideo />
-            <News />
-            <Newsletter />
-            <Footer /> */}
+            {/* <ContentSlider /> */}
+            {/* <ContentImage /> */}
+            {/* <ViewMore /> */}
+            {/* <ContentSlider /> */}
+            {/* <ContentVideo /> */}
+            {/* <News /> */}
+            {/* <Newsletter /> */}
+            {/* <Footer /> */}
 
 
         </>
