@@ -2,6 +2,12 @@
 @use "../../styles/modules";
 
 .content_image {
+    margin-bottom: toRem(175);
+
+    @include respond-mobile() {
+        margin-bottom: toRem(73);
+    }
+
     .col {
         display: flex;
         align-items: center;
