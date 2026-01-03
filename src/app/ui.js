@@ -10,6 +10,7 @@ import ContentVideo from '@/components/content-video';
 import News from '@/components/news';
 import Newsletter from '@/components/newsletter';
 import Footer from '@/components/footer';
+import Accordion from '@/components/accordion';
 
 
 export default function UI() {
@@ -93,6 +94,21 @@ export default function UI() {
             period: '3.30 hrs'
         },
     ];
+
+    const accordionData = [
+        {
+            title: 'To round out our weekend of celebrations, we are holding - 1',
+            content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
+        },
+        {
+            title: 'To round out our weekend of celebrations, we are holding - 2',
+            content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
+        },
+        {
+            title: 'To round out our weekend of celebrations, we are holding - 3',
+            content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
+        },
+    ]
     return (
         <>
             <Header />
@@ -100,6 +116,7 @@ export default function UI() {
             <ContentSlider type={sports} data={sportsData} />
             <ContentImage />
             <ContentSlider type={extraClasses} data={extraCurricularData} />
+            <Accordion data={accordionData} />
             {/* <ContentImage /> */}
             {/* <ViewMore /> */}
             {/* <ContentSlider /> */}
