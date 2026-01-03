@@ -1,0 +1,136 @@
+@use "../../styles/utils" as *;
+@use "../../styles/modules";
+
+.swiper_slide {
+    padding: toRem(45) toRem(40) toRem(44) toRem(40);
+    background-color: var(--color-white);
+    border-radius: toRem(32);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        transform: translateY(-5px);
+        z-index: 10;
+    }
+
+    @include respond-desktoplarge() {
+        padding: toRem(32) toRem(42);
+    }
+
+    @include respond-mobile() {
+        padding: toRem(27) toRem(16);
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .image_container {
+        height: toRem(310);
+        width: 100%;
+        border-radius: toRem(32);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        text-transform: none;
+        font-size: toRem(32);
+        margin-block: toRem(40) toRem(20);
+
+        @include respond-desktoplarge() {
+            font-size: toRem(20);
+        }
+
+        @include respond-mobile() {
+            font-size: toRem(22);
+            margin-block: toRem(16) toRem(10);
+        }
+    }
+
+    p {
+        text-align: left;
+        font-size: toRem(24);
+        margin-bottom: toRem(40);
+        min-height: toRem(100);
+        max-height: toRem(100);
+
+        @include respond-desktoplarge() {
+            font-size: toRem(20);
+        }
+
+        @include respond-mobile() {
+            font-size: toRem(16);
+            margin-bottom: toRem(16);
+            min-height: toRem(73);
+        }
+    }
+
+    .info_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--color-light-green);
+        color: var(--color-white);
+        border-radius: toRem(32);
+        padding: toRem(20) toRem(30);
+        gap: toRem(20);
+
+        @include respond-desktoplarge() {
+            padding: toRem(20) toRem(25);
+            gap: toRem(15);
+        }
+
+        @include respond-desktopnormal() {
+            padding: toRem(10) toRem(20);
+        }
+
+        @include respond-smalldesktop() {
+            padding: toRem(20) toRem(30);
+        }
+
+        .info_item {
+            display: flex;
+            flex-direction: column;
+            font-size: toRem(32);
+            font-weight: $font-bold;
+
+            &:not(:last-child) {
+                border-right: 1px solid var(--color-white);
+                padding-right: toRem(20);
+            }
+
+            @include respond-desktoplarge() {
+                font-size: toRem(22);
+            }
+
+            @include respond-desktopnormal() {
+                font-size: toRem(16);
+            }
+
+            @include respond-smalldesktop() {
+                font-size: toRem(32);
+            }
+
+            @include respond-mobile() {
+                font-size: toRem(16);
+            }
+
+
+            .info_item_text {
+                font-size: toRem(20);
+                font-weight: $font-normal;
+
+                @include respond-desktopnormal() {
+                    font-size: toRem(16);
+                }
+            }
+        }
+    }
+}
