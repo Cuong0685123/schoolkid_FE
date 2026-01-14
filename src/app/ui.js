@@ -97,15 +97,15 @@ export default function UI() {
 
     const accordionData = [
         {
-            title: 'To round out our weekend of celebrations, we are holding - 1',
+            title: 'To round out our weekend of celebrations, we are holding',
             content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
         },
         {
-            title: 'To round out our weekend of celebrations, we are holding - 2',
+            title: 'To round out our weekend of celebrations, we are holding',
             content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
         },
         {
-            title: 'To round out our weekend of celebrations, we are holding - 3',
+            title: 'To round out our weekend of celebrations, we are holding',
             content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
         },
     ]

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './styles.module.scss';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Index({ data: accordionData }) {
     const [open, setOpen] = useState(null);
@@ -18,15 +18,22 @@ export default function Index({ data: accordionData }) {
                             <h3>Know more about EduKid</h3>
                             <div className={styles.accordion}>
                                 {accordionData.map((item, index) => (
-                                    <div key={index} className={styles.item}>
-                                        <button className={styles.header} onClick={() => toggle(index)}> Accordion title {item.title}
-                                            {open == index ? <span><Image src="/images/accordion-close.svg" width={24} height={24} alt="accordion-close" /></span> : <span><Image src="/images/accordion-open.svg" width={24} height={24} alt="accordion-open" /></span>}
+                                    <div 
+                                        key={index} 
+                                        className={`${styles.accordion_item} ${open === index ? styles.active : ''}`}
+                                    >
+                                        <button 
+                                            className={styles.accordion_summary}
+                                            onClick={() => toggle(index)}
+                                            aria-expanded={open === index}
+                                        >
+                                            {item.title}
                                         </button>
-                                        {open === index && (
-                                            <div className={styles.content}>
-                                                Accordion content {item.content}
+                                        <div className={styles.accordion_content}>
+                                            <div className={styles.accordion_inner}>
+                                                <p>{item.content}</p>
                                             </div>
-                                        )}
+                                        </div>
                                     </div>
                                 ))}
                             </div>

@@ -3,6 +3,7 @@
 
 .content_image {
     margin-bottom: toRem(175);
+    padding-top: toRem(190);
 
     @include respond-mobile() {
         margin-bottom: toRem(73);
@@ -10,7 +11,7 @@
 
     .col {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         @include respond-tablet() {
@@ -59,24 +60,73 @@
             }
 
             .accordion {
-
-                .item {
+                .accordion_item {
                     margin-bottom: toRem(25);
-                    button {
-                        font-weight: $font-medium;
-                        color: var(--color-text);
-                        font-size: toRem(24);
-                        padding: toRem(30) toRem(75) toRem(35) toRem(33);
-                        
-                        background-color: transparent;
-                        border: 1px solid var(--color-border);
-                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    
-                        
+                    overflow: hidden;
+
+                    .accordion_summary {
+                        width: 100%;
+                        list-style: none;
+                        border: none;
+                        border-color: transparent;
+                        color: var(--color-white);
+                        background-color: var(--color-orange);
+                        padding: toRem(33) toRem(84) toRem(33) toRem(33);
+                        border-radius: toRem(18);
+                        cursor: pointer;
+                        text-align: left;
+                        font-size: inherit;
+                        font-family: inherit;
+                        transition: all 0.3s ease;
+                        position: relative;
+
+                        &:hover {
+                            opacity: 0.9;
+                        }
+
+                        &::after {
+                            content: '+';
+                            position: absolute;
+                            right: toRem(33);
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: toRem(24);
+                            font-weight: bold;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+
+                    &.active {
+                        .accordion_summary {
+                            &::after {
+                                transform: translateY(-50%) rotate(45deg);
+                            }
+                        }
+
+                        .accordion_content {
+                            max-height: 1000px;
+                            opacity: 1;
+                        }
+                    }
+
+                    .accordion_content {
+                        max-height: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                                    opacity 0.3s ease 0.1s;
+                    }
+
+                    .accordion_inner {
+                        padding-top: toRem(25);
+
+                        p {
+                            margin: 0;
+                        }
                     }
                 }
-
             }
+
         }
     }
 }
