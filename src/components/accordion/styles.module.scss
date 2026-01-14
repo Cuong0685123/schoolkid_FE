@@ -69,8 +69,8 @@
                         list-style: none;
                         border: none;
                         border-color: transparent;
-                        color: var(--color-white);
-                        background-color: var(--color-orange);
+                        color: var(--color-text);
+                        background-color: var(--color-white);
                         padding: toRem(33) toRem(84) toRem(33) toRem(33);
                         border-radius: toRem(18);
                         cursor: pointer;
@@ -79,9 +79,10 @@
                         font-family: inherit;
                         transition: all 0.3s ease;
                         position: relative;
+                        border: 1px solid var(--color-border);
 
                         &:hover {
-                            opacity: 0.9;
+                            background-color: var(--color-light-yellow);
                         }
 
                         &::after {
@@ -97,7 +98,13 @@
                     }
 
                     &.active {
+                        border: 1px solid var(--color-border);
+                        border-radius: toRem(18);
+
                         .accordion_summary {
+                            background-color: var(--color-orange);
+                            color: var(--color-white);
+
                             &::after {
                                 transform: translateY(-50%) rotate(45deg);
                             }
