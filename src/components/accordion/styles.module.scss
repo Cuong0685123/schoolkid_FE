@@ -125,7 +125,11 @@
                     }
 
                     .accordion_inner {
-                        padding-top: toRem(25);
+                        padding: toRem(25) toRem(32) toRem(32) toRem(25);
+
+                        @include respond-mobile() {
+                            padding: toRem(25) toRem(18) toRem(18) toRem(18);
+                        }
 
                         p {
                             margin: 0;
