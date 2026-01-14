@@ -117,8 +117,7 @@ export default function UI() {
             <ContentImage />
             <ContentSlider type={extraClasses} data={extraCurricularData} />
             <Accordion data={accordionData} />
-            {/* <ContentImage /> */}
-            {/* <ViewMore /> */}
+            <ViewMore />
             {/* <ContentSlider /> */}
             {/* <ContentVideo /> */}
             {/* <News /> */}
