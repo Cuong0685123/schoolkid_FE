@@ -109,6 +109,45 @@ export default function UI() {
             content: 'Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.'
         },
     ]
+
+    const teachersData = [
+        {
+            id: 1,
+            name: "Steven Strange",
+            role: "Teacher",
+            image: "/images/components/teachers/teacher-1.jpg",
+            facebook: "https://www.facebook.com/",
+            twitter: "https://www.twitter.com/",
+            youtube: "https://www.youtube.com/",
+        },
+        {
+            id: 2,
+            name: "Diana Prince",
+            role: "Teacher",
+            image: "/images/components/teachers/teacher-2.jpg",
+            facebook: "https://www.facebook.com/",
+            twitter: "https://www.twitter.com/",
+            youtube: "https://www.youtube.com/",
+        },
+        {
+            id: 3,
+            name: "Edith Nekesa",
+            role: "Teacher",
+            image: "/images/components/teachers/teacher-3.jpg",
+            facebook: "https://www.facebook.com/",
+            twitter: "https://www.twitter.com/",
+            youtube: "https://www.youtube.com/",
+        },
+        {
+            id: 4,
+            name: "Peter Parker",
+            role: "Teacher",
+            image: "/images/components/teachers/teacher-4.jpg",
+            facebook: "https://www.facebook.com/",
+            twitter: "https://www.twitter.com/",
+            youtube: "https://www.youtube.com/",
+        },
+    ]
     return (
         <>
             <Header />
@@ -118,7 +157,7 @@ export default function UI() {
             <ContentSlider type={extraClasses} data={extraCurricularData} />
             <Accordion data={accordionData} />
             <ViewMore />
-            {/* <ContentSlider /> */}
+            <ContentSlider type={teachers} data={teachersData} />
             {/* <ContentVideo /> */}
             {/* <News /> */}
             {/* <Newsletter /> */}

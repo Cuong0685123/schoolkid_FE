@@ -13,8 +13,38 @@ import 'swiper/css/pagination';
 
 export default function Index({type, data}) {
 
+    const slidesPerView = type === 'teachers' ? 4 : 3;
+    const spaceBetween = type === 'teachers' ? 30 : 50;
 
-    
+    const breakpoints = type === 'teachers' 
+        ? {
+            0: {
+                slidesPerView: 1,
+                centeredSlides: true,
+            },
+            768: {
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 4,
+                centeredSlides: false,
+            },
+        }
+        : {
+            0: {
+                slidesPerView: 1,
+                centeredSlides: true,
+            },
+            768: {
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+        };
 
     return (
         <>
@@ -29,24 +59,11 @@ export default function Index({type, data}) {
                             pagination={{
                                 clickable: true,
                             }}
-                            spaceBetween={50}
-                            slidesPerView={3}
+                            spaceBetween={spaceBetween}
+                            slidesPerView={slidesPerView}
                             onSlideChange={() => console.log('slide change')}
                             onSwiper={(swiper) => console.log(swiper)}
-                            breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
-                                    centeredSlides: true,
-                                },
-                                768: {
-                                    slidesPerView: 2,
-                                    centeredSlides: false,
-                                },
-                                1024: {
-                                    slidesPerView: 3,
-                                    centeredSlides: false,
-                                },
-                            }}
+                            breakpoints={breakpoints}
                         >
                             {
                                 data.map((item, index) => (
