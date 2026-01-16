@@ -8,7 +8,12 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 100px;
+        gap: toRem(100);
+
+        @include respond-mobile() {
+            flex-direction: column;
+            gap: toRem(50);
+        }
 
 
         .col_left {
@@ -17,30 +22,55 @@
             display: flex;
             flex-direction: column;
             gap: toRem(80);
+
+            @include respond-mobile() {
+                width: 100%;
+                gap: toRem(40);
+            }
         }
 
         .col_right {
             width: 70%;
 
+            @include respond-mobile() {
+                width: 100%;
+            }
+
             h2 {
                 font-size: toRem(45);
                 font-weight: $font-semibold;
                 margin-bottom: toRem(55);
+                text-transform: capitalize;
+
+                @include respond-mobile() {
+                    margin-bottom: toRem(40);
+                    font-size: toRem(30);
+                }
             }
 
             .quick_links {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: flex-start;
+                flex-wrap: wrap;
                 gap: 100px;
+
+                @include respond-mobile() {
+                    gap: toRem(50);
+                }
+
 
                 ul {
                     width: 33.33%;
-                    
+
                     li {
-                        
+
                         &:not(:last-child) {
                             margin-bottom: toRem(25);
+
+                            @include respond-mobile() {
+                                margin-bottom: toRem(10);
+                            }
                         }
                     }
                 }
